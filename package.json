@@ -1,0 +1,30 @@
+{
+  "name": "svelte-wasm-worker",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "wasm:build": "wasm-pack build ./wasm/hello_wasm --target bundler --out-dir ./pkg --scope sample",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sample/hello_wasm": "file:./wasm/hello_wasm/pkg",
+    "@sveltejs/vite-plugin-svelte": "^2.0.0",
+    "@tsconfig/svelte": "^3.0.0",
+    "comlink": "^4.3.1",
+    "npm-run-all": "^4.1.5",
+    "svelte": "^3.54.0",
+    "svelte-check": "^2.10.0",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vite-plugin-wasm": "^3.1.1",
+    "wasm-pack": "^0.10.3"
+  },
+  "dependencies": {
+    "@sveltejs/kit": "^1.0.7"
+  }
+}
